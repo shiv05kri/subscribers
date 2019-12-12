@@ -1,0 +1,30 @@
+{
+    "host" : "smtp.gmail.com",
+    "port" : 587,
+    "timeout" : 300000,
+    "writetimeout" : 300000,
+    "connectiontimeout" : 300000,
+    "auth" : {
+        "enable" : true,
+        "username" : "shivangi0502kumari2gmail.com",
+        "password" : {
+            "$crypto" : {
+                "type" : "x-simple-encryption",
+                "value" : {
+                    "cipher" : "AES/CBC/PKCS5Padding",
+                    "stableId" : "openidm-sym-default",
+                    "salt" : "gMJaVj50JuzWfL5MAOEuxw==",
+                    "data" : "v2vLf/uwTVfP+wwLItiJtQ==",
+                    "keySize" : 16,
+                    "purpose" : "idm.config.encryption",
+                    "iv" : "Ip1+c71DsoPXVAp+5XbV2g==",
+                    "mac" : "0DUcwpnuD2rj6SDsEQi96g=="
+                }
+            }
+        }
+    },
+    "starttls" : {
+        "enable" : true
+    },
+    "from" : "idm@example.com"
+}
